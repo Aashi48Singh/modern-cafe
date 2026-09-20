@@ -1,0 +1,840 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================================================
+         META INFORMATION
+         ========================================================= -->
+
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile/tablet devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Description used by search engines -->
+    <meta name="description"
+        content="Modern Café - Fresh coffee, delicious food, and a relaxing atmosphere.">
+
+    <!-- Website author -->
+    <meta name="author" content="Modern Café">
+
+    <!-- Browser tab title -->
+    <title>Modern Café | Fresh Coffee & Delicious Food</title>
+
+
+    <!-- =========================================================
+         BOOTSTRAP CSS
+         Bootstrap gives us responsive layout and ready-to-use
+         components such as Navbar, Buttons, Cards, etc.
+         ========================================================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- =========================================================
+         BOOTSTRAP ICONS
+         Used later for icons such as coffee, phone, location, etc.
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <!-- =========================================================
+         CUSTOM CSS
+         Our own styles will be written here.
+         ========================================================= -->
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         NAVIGATION BAR
+         ========================================================= -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+
+            <div class="container">
+
+                <!-- Website Logo / Brand -->
+                <a class="navbar-brand fw-bold" href="#home">
+                    <i class="bi bi-cup-hot-fill"></i>
+                    Modern Café
+                </a>
+
+
+                <!--
+                    Mobile Menu Button
+
+                    On smaller screens the normal navigation links
+                    are hidden and this button opens the menu.
+                -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <!-- =================================================
+                     NAVIGATION LINKS
+                     ================================================= -->
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+
+                    <!-- Navigation links -->
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#menu">
+                                Menu
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">
+                                Gallery
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                Contact
+                            </a>
+                        </li>
+
+                        <!-- Call-to-action button -->
+                        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+
+                            <a
+                                href="#contact"
+                                class="btn btn-warning fw-semibold">
+
+                                Book a Table
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+         ========================================================= -->
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO SECTION
+             ===================================================== -->
+
+        <section id="home" class="py-5">
+
+            <div class="container">
+
+                <div class="row align-items-center min-vh-75">
+
+                    <!-- Hero Text -->
+                    <div class="col-lg-6 text-center text-lg-start">
+
+                        <p class="text-warning fw-semibold">
+                            Welcome to Modern Café
+                        </p>
+
+                        <h1 class="display-3 fw-bold">
+                            Fresh Coffee.
+                            <br>
+                            Good Food.
+                            <br>
+                            Good Moments.
+                        </h1>
+
+                        <p class="lead mt-3">
+                            Enjoy freshly brewed coffee, delicious food,
+                            and a relaxing atmosphere with friends and family.
+                        </p>
+
+
+                        <!-- Hero Buttons -->
+                        <div class="mt-4">
+
+                            <a
+                                href="#menu"
+                                class="btn btn-warning btn-lg me-2 mb-2">
+
+                                View Menu
+
+                            </a>
+
+                            <a
+                                href="#contact"
+                                class="btn btn-outline-dark btn-lg mb-2">
+
+                                Book a Table
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hero Image -->
+                    <div class="col-lg-6 mt-5 mt-lg-0">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+                            class="img-fluid rounded-4 shadow"
+                            alt="Freshly brewed coffee">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT SECTION
+             ===================================================== -->
+
+        <section id="about" class="py-5 bg-light">
+
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="text-center mb-5">
+
+                    <p class="text-warning fw-semibold">
+                        About Us
+                    </p>
+
+                    <h2 class="display-6 fw-bold">
+                        More Than Just Coffee
+                    </h2>
+
+                    <p class="text-muted">
+                        A place to relax, connect, and enjoy great food.
+                    </p>
+
+                </div>
+
+
+                <div class="row align-items-center g-5">
+
+                    <!-- About Image -->
+                    <div class="col-lg-6">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24"
+                            class="img-fluid rounded-4 shadow"
+                            alt="Modern cafe interior">
+
+                    </div>
+
+
+                    <!-- About Content -->
+                    <div class="col-lg-6">
+
+                        <h3 class="fw-bold mb-3">
+                            Quality in Every Cup
+                        </h3>
+
+                        <p class="text-muted">
+                            At Modern Café, we believe great coffee and good
+                            food bring people together. Our team focuses on
+                            quality ingredients, friendly service, and a
+                            comfortable atmosphere.
+                        </p>
+
+
+                        <!-- About Features -->
+                        <div class="row mt-4">
+
+                            <div class="col-sm-6 mb-3">
+
+                                <i class="bi bi-cup-hot-fill text-warning fs-3"></i>
+
+                                <h5 class="mt-2">
+                                    Fresh Coffee
+                                </h5>
+
+                                <p class="text-muted small">
+                                    Freshly brewed coffee every day.
+                                </p>
+
+                            </div>
+
+
+                            <div class="col-sm-6 mb-3">
+
+                                <i class="bi bi-heart-fill text-warning fs-3"></i>
+
+                                <h5 class="mt-2">
+                                    Made With Care
+                                </h5>
+
+                                <p class="text-muted small">
+                                    Quality ingredients and careful preparation.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MENU SECTION
+             ===================================================== -->
+
+        <section id="menu" class="py-5">
+
+            <div class="container">
+
+                <div class="text-center mb-5">
+
+                    <p class="text-warning fw-semibold">
+                        Our Menu
+                    </p>
+
+                    <h2 class="display-6 fw-bold">
+                        Popular Choices
+                    </h2>
+
+                    <p class="text-muted">
+                        Some of our customer's favourite items.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+                    <!-- Menu Item 1 -->
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="card h-100 border-0 shadow-sm">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7"
+                                class="card-img-top"
+                                alt="Cappuccino">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">
+                                    Cappuccino
+                                </h5>
+
+                                <p class="card-text text-muted">
+                                    Rich espresso topped with creamy foam.
+                                </p>
+
+                                <strong>
+                                    ₹180
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Menu Item 2 -->
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="card h-100 border-0 shadow-sm">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1541167760496-1628856ab772"
+                                class="card-img-top"
+                                alt="Latte">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">
+                                    Café Latte
+                                </h5>
+
+                                <p class="card-text text-muted">
+                                    Smooth espresso blended with steamed milk.
+                                </p>
+
+                                <strong>
+                                    ₹160
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Menu Item 3 -->
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="card h-100 border-0 shadow-sm">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1579751626657-72bc17010498"
+                                class="card-img-top"
+                                alt="Pizza">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">
+                                    Margherita Pizza
+                                </h5>
+
+                                <p class="card-text text-muted">
+                                    Classic pizza with tomato, mozzarella, and basil.
+                                </p>
+
+                                <strong>
+                                    ₹299
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SERVICES SECTION
+             ===================================================== -->
+
+        <section id="services" class="py-5 bg-light">
+
+            <div class="container">
+
+                <div class="text-center mb-5">
+
+                    <p class="text-warning fw-semibold">
+                        What We Offer
+                    </p>
+
+                    <h2 class="display-6 fw-bold">
+                        Our Services
+                    </h2>
+
+                </div>
+
+
+                <div class="row g-4 text-center">
+
+                    <!-- Service 1 -->
+                    <div class="col-md-4">
+
+                        <div class="p-4 bg-white rounded-4 shadow-sm">
+
+                            <i class="bi bi-cup-hot-fill fs-1 text-warning"></i>
+
+                            <h4 class="mt-3">
+                                Fresh Coffee
+                            </h4>
+
+                            <p class="text-muted">
+                                Freshly prepared coffee using quality beans.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Service 2 -->
+                    <div class="col-md-4">
+
+                        <div class="p-4 bg-white rounded-4 shadow-sm">
+
+                            <i class="bi bi-calendar-event-fill fs-1 text-warning"></i>
+
+                            <h4 class="mt-3">
+                                Private Events
+                            </h4>
+
+                            <p class="text-muted">
+                                A comfortable space for small events and gatherings.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Service 3 -->
+                    <div class="col-md-4">
+
+                        <div class="p-4 bg-white rounded-4 shadow-sm">
+
+                            <i class="bi bi-wifi fs-1 text-warning"></i>
+
+                            <h4 class="mt-3">
+                                Free Wi-Fi
+                            </h4>
+
+                            <p class="text-muted">
+                                Work, study, or relax while enjoying your coffee.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GALLERY SECTION
+             ===================================================== -->
+
+        <section id="gallery" class="py-5">
+
+            <div class="container">
+
+                <div class="text-center mb-5">
+
+                    <p class="text-warning fw-semibold">
+                        Our Café
+                    </p>
+
+                    <h2 class="display-6 fw-bold">
+                        Gallery
+                    </h2>
+
+                </div>
+
+
+                <div class="row g-3">
+
+                    <div class="col-6 col-lg-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1445116572660-236099ec97a0"
+                            class="img-fluid rounded-3"
+                            alt="Cafe interior">
+                    </div>
+
+                    <div class="col-6 col-lg-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1511081692775-05d0f180a065"
+                            class="img-fluid rounded-3"
+                            alt="Coffee cup">
+                    </div>
+
+                    <div class="col-6 col-lg-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb"
+                            class="img-fluid rounded-3"
+                            alt="Cafe seating">
+                    </div>
+
+                    <div class="col-6 col-lg-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+                            class="img-fluid rounded-3"
+                            alt="Coffee preparation">
+                    </div>
+
+                    <div class="col-6 col-lg-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb"
+                            class="img-fluid rounded-3"
+                            alt="Cafe table">
+                    </div>
+
+                    <div class="col-6 col-lg-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13"
+                            class="img-fluid rounded-3"
+                            alt="Coffee and dessert">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT SECTION
+             ===================================================== -->
+
+        <section id="contact" class="py-5 bg-light">
+
+            <div class="container">
+
+                <div class="text-center mb-5">
+
+                    <p class="text-warning fw-semibold">
+                        Get In Touch
+                    </p>
+
+                    <h2 class="display-6 fw-bold">
+                        Contact Us
+                    </h2>
+
+                </div>
+
+
+                <div class="row g-5">
+
+                    <!-- Contact Information -->
+                    <div class="col-lg-5">
+
+                        <h3 class="fw-bold">
+                            Visit Our Café
+                        </h3>
+
+                        <p class="text-muted">
+                            We'd love to welcome you. Visit us for a coffee,
+                            meal, or relaxing time with friends.
+                        </p>
+
+
+                        <div class="mt-4">
+
+                            <p>
+                                <i class="bi bi-geo-alt-fill text-warning"></i>
+                                123 Main Street, Your City
+                            </p>
+
+                            <p>
+                                <i class="bi bi-telephone-fill text-warning"></i>
+                                +91 98765 43210
+                            </p>
+
+                            <p>
+                                <i class="bi bi-envelope-fill text-warning"></i>
+                                hello@moderncafe.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact Form -->
+                    <div class="col-lg-7">
+
+                        <form id="contactForm">
+
+                            <!-- Name -->
+                            <div class="mb-3">
+
+                                <label for="name" class="form-label">
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Email -->
+                            <div class="mb-3">
+
+                                <label for="email" class="form-label">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Message -->
+                            <div class="mb-3">
+
+                                <label for="message" class="form-label">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    class="form-control"
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="Write your message..."
+                                    required></textarea>
+
+                            </div>
+
+
+                            <!-- Submit Button -->
+                            <button
+                                type="submit"
+                                class="btn btn-warning">
+
+                                Send Message
+
+                            </button>
+
+
+                            <!--
+                                JavaScript will display a success
+                                message here after form submission.
+                            -->
+                            <div
+                                id="formMessage"
+                                class="mt-3">
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="bg-dark text-white py-4">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <!-- Brand -->
+                <div class="col-md-6 text-center text-md-start">
+
+                    <h5 class="mb-1">
+                        <i class="bi bi-cup-hot-fill"></i>
+                        Modern Café
+                    </h5>
+
+                    <small class="text-white-50">
+                        Fresh coffee. Good food. Good moments.
+                    </small>
+
+                </div>
+
+
+                <!-- Copyright -->
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+
+                    <small>
+                        &copy;
+                        <span id="currentYear"></span>
+                        Modern Café. All rights reserved.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         BOOTSTRAP JAVASCRIPT
+         Required for interactive Bootstrap components such as
+         the mobile navbar.
+         ========================================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- =========================================================
+         CUSTOM JAVASCRIPT
+         ========================================================= -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+

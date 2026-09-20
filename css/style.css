@@ -1,0 +1,461 @@
+
+
+
+/* ROOT 
+  
+    */
+
+:root {
+    --primary-color: #c58b4e;
+    --primary-dark: #9c6734;
+    --dark-color: #222222;
+    --light-color: #f8f5f1;
+    --text-color: #444444;
+    --white-color: #ffffff;
+
+    --section-padding: 80px;
+}
+
+
+
+/* Smooth scrolling when clicking navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Basic body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    line-height: 1.6;
+}
+
+
+/* Remove default link underline */
+a {
+    text-decoration: none;
+}
+
+
+/* Prevent images from creating unwanted spacing */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/*3. NAVBAR
+  /* Keep navbar visible while scrolling */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Café logo */
+.navbar-brand {
+    font-size: 1.35rem;
+    letter-spacing: 0.5px;
+}
+
+
+/* Navigation links */
+.navbar .nav-link {
+    transition: color 0.3s ease;
+}
+
+
+/* Navigation hover effect */
+.navbar .nav-link:hover {
+    color: var(--primary-color);
+}
+
+
+/* Active navigation link */
+.navbar .nav-link.active {
+    color: var(--primary-color);
+}
+
+
+/* Book a table button */
+.navbar .btn-warning {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+/* Button hover */
+.navbar .btn-warning:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   4. HERO SECTION
+   ========================================================= */
+
+/*
+   Minimum height gives the hero enough vertical space
+   without forcing it to be exactly one screen height.
+*/
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+
+/* Hero heading */
+#home h1 {
+    color: var(--dark-color);
+    line-height: 1.1;
+}
+
+
+/* Hero description */
+#home .lead {
+    color: var(--text-color);
+    max-width: 550px;
+}
+
+
+/* Hero image */
+#home img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+}
+
+
+/* Hero button */
+#home .btn-warning {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+/* Hero button hover */
+#home .btn-warning:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   5. SECTION HEADINGS
+   ========================================================= */
+
+section {
+    scroll-margin-top: 75px;
+}
+
+
+/* Small heading above main section heading */
+section .text-warning {
+    color: var(--primary-color) !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   6. ABOUT SECTION
+   ========================================================= */
+
+#about {
+    background-color: var(--light-color) !important;
+}
+
+
+/* About image */
+#about img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+
+/* About feature icons */
+#about .bi {
+    color: var(--primary-color) !important;
+}
+
+
+/* =========================================================
+   7. MENU SECTION
+   ========================================================= */
+
+
+/* Menu cards */
+#menu .card {
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Menu card image */
+#menu .card-img-top {
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+
+/* Card hover effect */
+#menu .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* Image zoom when hovering card */
+#menu .card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+
+/* Menu price */
+#menu strong {
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   8. SERVICES SECTION
+   ========================================================= */
+
+#services {
+    background-color: var(--light-color) !important;
+}
+
+
+/* Service cards */
+#services .col-md-4 > div {
+    height: 100%;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Service card hover */
+#services .col-md-4 > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+/* Service icons */
+#services .bi {
+    color: var(--primary-color) !important;
+}
+
+
+/* =========================================================
+   9. GALLERY SECTION
+   ========================================================= */
+
+/* Gallery images */
+#gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* Gallery hover */
+#gallery img:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   10. CONTACT SECTION
+   ========================================================= */
+
+#contact {
+    background-color: var(--light-color) !important;
+}
+
+
+/* Contact icons */
+#contact .bi {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+
+/* Contact form inputs */
+#contact .form-control {
+    border: 1px solid #dddddd;
+    padding: 12px 14px;
+    border-radius: 8px;
+}
+
+
+/* Input focus */
+#contact .form-control:focus {
+    border-color: var(--primary-color);
+
+    box-shadow:
+        0 0 0 0.2rem rgba(197, 139, 78, 0.2);
+}
+
+
+/* Contact submit button */
+#contact .btn-warning {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+/* Contact submit hover */
+#contact .btn-warning:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   11. FOOTER
+   ========================================================= */
+
+footer {
+    background-color: var(--dark-color) !important;
+}
+
+
+/* Footer brand */
+footer h5 {
+    color: var(--white-color);
+}
+
+
+/* Footer coffee icon */
+footer .bi {
+    color: var(--primary-color);
+}
+
+
+/* =========================================================
+   12. RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   TABLET
+   max-width: 991.98px
+   --------------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+
+    /* Reduce hero heading size */
+    #home h1 {
+        font-size: 3rem;
+    }
+
+
+    /* Reduce about image height */
+    #about img {
+        height: 400px;
+    }
+
+
+    /* Reduce gallery image height */
+    #gallery img {
+        height: 220px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   max-width: 767.98px
+   --------------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+
+    /* Reduce overall hero height */
+    .min-vh-75 {
+        min-height: auto;
+    }
+
+
+    /* Hero heading */
+    #home h1 {
+        font-size: 2.3rem;
+    }
+
+
+    /* Hero image */
+    #home img {
+        max-height: 400px;
+    }
+
+
+    /* About image */
+    #about img {
+        height: 300px;
+    }
+
+
+    /* Gallery images */
+    #gallery img {
+        height: 180px;
+    }
+
+
+    /* Section headings */
+    section h2 {
+        font-size: 2rem;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+   max-width: 575.98px
+   --------------------------------------------------------- */
+
+@media (max-width: 575.98px) {
+
+    /* Smaller hero heading */
+    #home h1 {
+        font-size: 2rem;
+    }
+
+
+    /* Smaller buttons */
+    #home .btn {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+
+
+    /* Gallery */
+    #gallery img {
+        height: 150px;
+    }
+
+
+    /* About image */
+    #about img {
+        height: 250px;
+    }
+
+}
