@@ -1,152 +1,238 @@
+/* =========================================================
+   MODERN CAFÉ - MAIN STYLESHEET
+   ========================================================= */
 
 
-
-/* ROOT 
-  
-    */
+/* =========================================================
+   1. CSS VARIABLES
+   ---------------------------------------------------------
+   Keeping common colors and values here makes the project
+   easier to maintain and modify later.
+   ========================================================= */
 
 :root {
     --primary-color: #c58b4e;
     --primary-dark: #9c6734;
+
     --dark-color: #222222;
     --light-color: #f8f5f1;
+
     --text-color: #444444;
+    --muted-color: #6c757d;
+
     --white-color: #ffffff;
+    --border-color: #e5e5e5;
 
     --section-padding: 80px;
+
+    --transition: all 0.3s ease;
 }
 
 
+/* =========================================================
+   2. GENERAL / RESET STYLES
+   ========================================================= */
 
-/* Smooth scrolling when clicking navigation links */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 75px;
 }
 
 
-/* Basic body styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
     color: var(--text-color);
+
     background-color: var(--white-color);
+
     line-height: 1.6;
+
+    overflow-x: hidden;
 }
 
 
 /* Remove default link underline */
+
 a {
     text-decoration: none;
 }
 
 
-/* Prevent images from creating unwanted spacing */
+/* Make images responsive */
+
 img {
     max-width: 100%;
     display: block;
 }
 
 
-/*3. NAVBAR
-  /* Keep navbar visible while scrolling */
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Buttons */
+
+button,
+.btn {
+    transition: var(--transition);
 }
 
 
-/* Café logo */
-.navbar-brand {
-    font-size: 1.35rem;
-    letter-spacing: 0.5px;
+/* =========================================================
+   3. BOOTSTRAP COLOR OVERRIDES
+   ========================================================= */
+
+.text-primary {
+    color: var(--primary-color) !important;
 }
 
 
-/* Navigation links */
-.navbar .nav-link {
-    transition: color 0.3s ease;
+.bg-primary {
+    background-color: var(--primary-color) !important;
 }
 
 
-/* Navigation hover effect */
-.navbar .nav-link:hover {
-    color: var(--primary-color);
-}
-
-
-/* Active navigation link */
-.navbar .nav-link.active {
-    color: var(--primary-color);
-}
-
-
-/* Book a table button */
-.navbar .btn-warning {
+.btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     color: var(--white-color);
 }
 
 
-/* Button hover */
-.navbar .btn-warning:hover {
-    background-color: var(--primary-dark);
-    border-color: var(--primary-dark);
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+    color: var(--white-color) !important;
+}
+
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 
 /* =========================================================
-   4. HERO SECTION
+   4. NAVBAR
    ========================================================= */
 
-/*
-   Minimum height gives the hero enough vertical space
-   without forcing it to be exactly one screen height.
-*/
+.navbar {
+    min-height: 70px;
+}
+
+
+.navbar-brand {
+    font-size: 1.35rem;
+    letter-spacing: 0.3px;
+}
+
+
+.navbar-brand i {
+    color: var(--primary-color);
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+
+    font-weight: 500;
+
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+
+    transition: var(--transition);
+}
+
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary-color);
+}
+
+
+/* Book table button inside navbar */
+
+.navbar .booking-btn {
+    white-space: nowrap;
+}
+
+
+
+
+/* =========================================================
+   5. HERO SECTION
+   ========================================================= */
+
+.hero-section {
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf4 0%,
+            #f8f5f1 100%
+        );
+
+    padding: 40px 0;
+}
+
+
 .min-vh-75 {
     min-height: 75vh;
 }
 
 
-/* Hero heading */
-#home h1 {
+.hero-section h1 {
     color: var(--dark-color);
-    line-height: 1.1;
+
+    line-height: 1.15;
 }
 
 
-/* Hero description */
-#home .lead {
+.hero-section .lead {
     color: var(--text-color);
-    max-width: 550px;
+
+    max-width: 600px;
 }
 
 
-/* Hero image */
-#home img {
+.hero-image-wrapper {
+    position: relative;
+}
+
+
+.hero-image-wrapper img {
     width: 100%;
+
     max-height: 550px;
+
     object-fit: cover;
 }
 
 
-/* Hero button */
-#home .btn-warning {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--white-color);
-}
+/* Small hero badge */
 
+.hero-section .badge {
+    font-size: 0.85rem;
 
-/* Hero button hover */
-#home .btn-warning:hover {
-    background-color: var(--primary-dark);
-    border-color: var(--primary-dark);
+    padding: 0.65rem 1rem;
+
+    border-radius: 50px;
 }
 
 
 /* =========================================================
-   5. SECTION HEADINGS
+   6. COMMON SECTION STYLES
    ========================================================= */
 
 section {
@@ -154,183 +240,677 @@ section {
 }
 
 
-/* Small heading above main section heading */
-section .text-warning {
-    color: var(--primary-color) !important;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+.section-subtitle {
+    display: inline-block;
+
+    color: var(--primary-color);
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 0.5rem;
+}
+
+
+section h2 {
+    color: var(--dark-color);
 }
 
 
 /* =========================================================
-   6. ABOUT SECTION
+   7. ABOUT SECTION
    ========================================================= */
 
 #about {
-    background-color: var(--light-color) !important;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 
 
-/* About image */
 #about img {
     width: 100%;
+
     height: 450px;
+
     object-fit: cover;
 }
 
 
-/* About feature icons */
 #about .bi {
-    color: var(--primary-color) !important;
+    flex-shrink: 0;
 }
 
 
 /* =========================================================
-   7. MENU SECTION
+   8. MENU SECTION
    ========================================================= */
+
+#menu {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+
+/* Search box */
+
+#menuSearch {
+    min-height: 48px;
+}
+
+
+#menuSearch:focus {
+    border-color: var(--primary-color);
+
+    box-shadow:
+        0 0 0 0.2rem
+        rgba(197, 139, 78, 0.15);
+}
+
+
+/* Search icon */
+
+.input-group-text {
+    background-color: var(--white-color);
+
+    border-color: var(--border-color);
+
+    color: var(--primary-color);
+}
+
+
+/* Menu filter buttons */
+
+.menu-filter {
+    min-width: 90px;
+}
 
 
 /* Menu cards */
-#menu .card {
+
+.menu-card {
+    border: 1px solid var(--border-color);
+
     overflow: hidden;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+
+    transition: var(--transition);
 }
 
 
-/* Menu card image */
-#menu .card-img-top {
-    height: 230px;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-
-/* Card hover effect */
-#menu .card:hover {
+.menu-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.12) !important;
 }
 
 
-/* Image zoom when hovering card */
-#menu .card:hover .card-img-top {
+/* Menu images */
+
+.menu-card .card-img-top {
+    height: 230px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.menu-card:hover .card-img-top {
     transform: scale(1.05);
 }
 
 
-/* Menu price */
-#menu strong {
-    color: var(--primary-dark);
+/* Card body */
+
+.menu-card .card-body {
+    padding: 1.5rem;
+}
+
+
+.menu-card .card-title {
+    color: var(--dark-color);
+
+    font-weight: 700;
+}
+
+
+.menu-card .card-text {
+    min-height: 50px;
+}
+
+
+/* Menu prices */
+
+.menu-price {
+    color: var(--primary-color);
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* Add to cart button */
+
+.add-to-cart {
+    margin-top: 0.5rem;
+}
+
+
+/* Hidden menu items */
+
+.menu-item.menu-hidden {
+    display: none;
+}
+
+
+/* No search result */
+
+#noMenuResults {
+    padding: 30px;
+}
+
+
+/* =========================================================
+   9. CART SECTION
+   ========================================================= */
+
+#cart {
+    background-color: var(--white-color);
+}
+
+
+#cartItems {
+    min-height: 100px;
+}
+
+
+/* Empty cart */
+
+#emptyCartMessage {
+    background-color: #fafafa;
+
+    border-color: var(--border-color) !important;
+}
+
+
+/* Cart item */
+
+.cart-item {
+    border: 1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    background-color: var(--white-color);
+
+    transition: var(--transition);
+}
+
+
+.cart-item:hover {
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* Cart item title */
+
+.cart-item-title {
+    font-weight: 700;
+
+    color: var(--dark-color);
+}
+
+
+/* Cart item price */
+
+.cart-item-price {
+    color: var(--primary-color);
+
+    font-weight: 700;
+}
+
+
+/* Quantity controls */
+
+.quantity-controls {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.quantity-btn {
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid var(--border-color);
+
+    background-color: var(--white-color);
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+
+.quantity-btn:hover {
+    background-color: var(--primary-color);
+
+    color: var(--white-color);
+
+    border-color: var(--primary-color);
+}
+
+
+.quantity-value {
+    min-width: 25px;
+
+    text-align: center;
+
+    font-weight: 600;
+}
+
+
+/* Remove cart button */
+
+.remove-cart-item {
+    border: none;
+
+    background: transparent;
+
+    color: #dc3545;
+
+    cursor: pointer;
+
     font-size: 1.1rem;
 }
 
 
+.remove-cart-item:hover {
+    color: #a71d2a;
+}
+
+
 /* =========================================================
-   8. SERVICES SECTION
+   10. SERVICES SECTION
    ========================================================= */
 
 #services {
-    background-color: var(--light-color) !important;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 
 
-/* Service cards */
-#services .col-md-4 > div {
-    height: 100%;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+.service-card {
+    border: 1px solid var(--border-color);
+
+    transition: var(--transition);
 }
 
 
-/* Service card hover */
-#services .col-md-4 > div:hover {
+.service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1) !important;
+
+    box-shadow:
+        0 15px 30px
+        rgba(0, 0, 0, 0.1) !important;
 }
 
 
-/* Service icons */
-#services .bi {
-    color: var(--primary-color) !important;
+.service-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background-color:
+        rgba(197, 139, 78, 0.12);
+
+    color: var(--primary-color);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.8rem;
 }
 
 
 /* =========================================================
-   9. GALLERY SECTION
+   11. GALLERY
    ========================================================= */
 
-/* Gallery images */
-#gallery img {
+#gallery {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+
+/* Gallery button */
+
+.gallery-item {
     width: 100%;
-    height: 250px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+.gallery-item img {
+    width: 100%;
+
+    height: 260px;
+
     object-fit: cover;
 
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 
-/* Gallery hover */
-#gallery img:hover {
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+
+/* Gallery modal image */
+
+#galleryModalImage {
+    max-height: 70vh;
+
+    width: 100%;
+
+    object-fit: contain;
+}
+
+/* =========================================================
+   DYNAMIC GALLERY PHOTOS
+   ========================================================= */
+
+/*
+   Container for photos added by the user.
+*/
+#dynamicGallery {
+    margin-top: 20px;
+}
+
+
+/*
+   Image added through the upload feature.
+*/
+.dynamic-gallery-image {
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: transform 0.4s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/*
+   Hover effect for dynamically added images.
+*/
+.dynamic-gallery-image:hover {
     transform: scale(1.03);
-    opacity: 0.9;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/*
+   Delete button for uploaded photo.
+*/
+.delete-gallery-photo {
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    border: none;
+
+    background-color: rgba(220, 53, 69, 0.9);
+
+    color: white;
+
+    width: 36px;
+
+    height: 36px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    z-index: 2;
+}
+
+
+.delete-gallery-photo:hover {
+    background-color: #dc3545;
+}
+
+
+/*
+   Gallery image wrapper.
+*/
+.dynamic-gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+/* =========================================================
+   12. REVIEWS
+   ========================================================= */
+
+#reviews {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+
+.review-card {
+    border: 1px solid var(--border-color);
+
+    transition: var(--transition);
+}
+
+
+.review-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.08) !important;
+}
+
+
+.review-card .bi-star-fill {
+    font-size: 0.95rem;
 }
 
 
 /* =========================================================
-   10. CONTACT SECTION
+   13. BOOKING SECTION
    ========================================================= */
 
-#contact {
-    background-color: var(--light-color) !important;
+#booking {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 
 
-/* Contact icons */
-#contact .bi {
-    color: var(--primary-color);
-    margin-right: 8px;
+#bookingForm {
+    border: 1px solid var(--border-color);
 }
 
 
-/* Contact form inputs */
-#contact .form-control {
-    border: 1px solid #dddddd;
-    padding: 12px 14px;
-    border-radius: 8px;
+.form-control,
+.form-select {
+    min-height: 46px;
+
+    border-color: var(--border-color);
 }
 
 
-/* Input focus */
-#contact .form-control:focus {
+.form-control:focus,
+.form-select:focus {
     border-color: var(--primary-color);
 
     box-shadow:
-        0 0 0 0.2rem rgba(197, 139, 78, 0.2);
+        0 0 0 0.2rem
+        rgba(197, 139, 78, 0.15);
 }
 
 
-/* Contact submit button */
-#contact .btn-warning {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--white-color);
-}
+/* Textarea should be taller */
 
-
-/* Contact submit hover */
-#contact .btn-warning:hover {
-    background-color: var(--primary-dark);
-    border-color: var(--primary-dark);
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
 }
 
 
 /* =========================================================
-   11. FOOTER
+   14. CONTACT SECTION
+   ========================================================= */
+
+#contact {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+
+#contact .card {
+    border: 1px solid var(--border-color);
+}
+
+
+#contact textarea {
+    resize: vertical;
+}
+
+
+/* =========================================================
+   15. FORM FEEDBACK
+   ========================================================= */
+
+.form-success {
+    color: #155724;
+
+    background-color: #d4edda;
+
+    border: 1px solid #c3e6cb;
+
+    border-radius: 6px;
+
+    padding: 12px 15px;
+}
+
+
+.form-error {
+    color: #721c24;
+
+    background-color: #f8d7da;
+
+    border: 1px solid #f5c6cb;
+
+    border-radius: 6px;
+
+    padding: 12px 15px;
+}
+
+
+/* =========================================================
+   16. MODALS
+   ========================================================= */
+
+.modal-content {
+    border: none;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.modal-header {
+    border-bottom-color: var(--border-color);
+}
+
+
+.modal-footer {
+    border-top-color: var(--border-color);
+}
+
+
+/* =========================================================
+   17. TOAST NOTIFICATION
+   ========================================================= */
+
+.toast {
+    border: 1px solid var(--border-color);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+.toast-header i {
+    color: var(--primary-color);
+}
+
+
+/* =========================================================
+   18. FOOTER
    ========================================================= */
 
 footer {
@@ -338,124 +918,256 @@ footer {
 }
 
 
-/* Footer brand */
-footer h5 {
+footer a {
     color: var(--white-color);
+
+    transition: var(--transition);
 }
 
 
-/* Footer coffee icon */
-footer .bi {
+footer a:hover {
     color: var(--primary-color);
 }
 
 
 /* =========================================================
-   12. RESPONSIVE DESIGN
+   19. ACCESSIBILITY / FOCUS
    ========================================================= */
 
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid
+        rgba(197, 139, 78, 0.35);
 
-/* ---------------------------------------------------------
-   TABLET
-   max-width: 991.98px
-   --------------------------------------------------------- */
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   20. TABLET RESPONSIVE DESIGN
+   ========================================================= */
 
 @media (max-width: 991.98px) {
 
-    /* Reduce hero heading size */
-    #home h1 {
-        font-size: 3rem;
+    /* Hero */
+
+    .hero-section {
+        padding: 60px 0;
     }
 
 
-    /* Reduce about image height */
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+
+
+    /* Navbar */
+
+    .navbar-nav {
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .navbar-nav .nav-item {
+        margin-bottom: 4px;
+    }
+
+
+    .navbar .booking-btn {
+        display: inline-block;
+    }
+
+
+    /* About image */
+
     #about img {
         height: 400px;
     }
 
 
-    /* Reduce gallery image height */
-    #gallery img {
+    /* Gallery */
+
+    .gallery-item img {
         height: 220px;
     }
 
 }
 
 
-/* ---------------------------------------------------------
-   MOBILE
-   max-width: 767.98px
-   --------------------------------------------------------- */
+/* =========================================================
+   21. MOBILE RESPONSIVE DESIGN
+   ========================================================= */
 
 @media (max-width: 767.98px) {
 
-    /* Reduce overall hero height */
+    :root {
+        --section-padding: 60px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        padding: 40px 0 60px;
+    }
+
+
     .min-vh-75 {
         min-height: auto;
     }
 
 
-    /* Hero heading */
-    #home h1 {
-        font-size: 2.3rem;
+    .hero-section h1 {
+        font-size: 2.2rem;
+
+        line-height: 1.2;
     }
 
 
-    /* Hero image */
-    #home img {
-        max-height: 400px;
+    .hero-section .lead {
+        font-size: 1rem;
     }
 
 
-    /* About image */
+    .hero-section .btn {
+        width: 100%;
+    }
+
+
+    .hero-image-wrapper {
+        margin-top: 20px;
+    }
+
+
+    /* About */
+
     #about img {
         height: 300px;
     }
 
 
-    /* Gallery images */
-    #gallery img {
-        height: 180px;
+    /* Section headings */
+
+    section h2 {
+        font-size: 2rem;
     }
 
 
-    /* Section headings */
-    section h2 {
-        font-size: 2rem;
+    /* Menu */
+
+    .menu-card .card-img-top {
+        height: 220px;
+    }
+
+
+    /* Gallery */
+
+    .gallery-item img {
+        height: 200px;
+    }
+
+
+    /* Cart */
+
+    .cart-item {
+        padding: 12px;
+    }
+
+
+    /* Booking */
+
+    #bookingForm {
+        padding: 20px !important;
     }
 
 }
 
 
-/* ---------------------------------------------------------
-   SMALL MOBILE
-   max-width: 575.98px
-   --------------------------------------------------------- */
+/* =========================================================
+   22. SMALL MOBILE DEVICES
+   ========================================================= */
 
 @media (max-width: 575.98px) {
 
-    /* Smaller hero heading */
-    #home h1 {
-        font-size: 2rem;
+    /* Navbar */
+
+    .navbar-brand {
+        font-size: 1.15rem;
     }
 
 
-    /* Smaller buttons */
-    #home .btn {
-        width: 100%;
-        margin-right: 0 !important;
+    /* Hero */
+
+    .hero-section h1 {
+        font-size: 1.9rem;
+    }
+
+
+    .hero-section .btn {
+        font-size: 0.95rem;
+    }
+
+
+    /* Menu filter */
+
+    .menu-filter {
+        min-width: 75px;
+
+        font-size: 0.85rem;
+    }
+
+
+    /* Menu cards */
+
+    .menu-card .card-img-top {
+        height: 200px;
     }
 
 
     /* Gallery */
-    #gallery img {
-        height: 150px;
+
+    .gallery-item img {
+        height: 160px;
     }
 
 
-    /* About image */
-    #about img {
-        height: 250px;
+    /* Service cards */
+
+    .service-card {
+        padding: 25px !important;
+    }
+
+
+    /* Footer */
+
+    footer {
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   23. REDUCE ANIMATION FOR USERS WHO PREFER LESS MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+
+        animation: none !important;
     }
 
 }

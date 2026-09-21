@@ -1,329 +1,320 @@
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-    <!-- =========================================================
-         META INFORMATION
-         ========================================================= -->
+    <!-- ==========================================
+         BASIC PAGE INFORMATION
+         ========================================== -->
 
     <!-- Character encoding -->
     <meta charset="UTF-8">
 
-    <!-- Makes the website responsive on mobile/tablet devices -->
+    <!-- Makes the website responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Description used by search engines -->
+    <!-- Website description for search engines -->
     <meta name="description"
-        content="Modern Café - Fresh coffee, delicious food, and a relaxing atmosphere.">
+        content="Modern Café - Fresh coffee, delicious food, desserts and a comfortable place to relax.">
 
-    <!-- Website author -->
-    <meta name="author" content="Modern Café">
-
-    <!-- Browser tab title -->
-    <title>Modern Café | Fresh Coffee & Delicious Food</title>
+    <!-- Website title shown in browser tab -->
+    <title>Modern Café | Coffee, Food & Desserts</title>
 
 
-    <!-- =========================================================
+    <!-- ==========================================
          BOOTSTRAP CSS
-         Bootstrap gives us responsive layout and ready-to-use
-         components such as Navbar, Buttons, Cards, etc.
-         ========================================================= -->
+         ========================================== -->
 
+    <!-- Bootstrap 5.3 CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 
 
-    <!-- =========================================================
+    <!-- ==========================================
          BOOTSTRAP ICONS
-         Used later for icons such as coffee, phone, location, etc.
-         ========================================================= -->
+         ========================================== -->
 
     <link
         rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
 
 
-    <!-- =========================================================
-         CUSTOM CSS
-         Our own styles will be written here.
-         ========================================================= -->
+    <!-- ==========================================
+         OUR CUSTOM CSS
+         ========================================== -->
 
+    <!-- CSS file created separately -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 
 <body>
 
-    <!-- =========================================================
-         NAVIGATION BAR
-         ========================================================= -->
+    <!-- ==========================================
+         NAVBAR
+         ========================================== -->
 
-    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
 
-            <div class="container">
-
-                <!-- Website Logo / Brand -->
-                <a class="navbar-brand fw-bold" href="#home">
-                    <i class="bi bi-cup-hot-fill"></i>
-                    Modern Café
-                </a>
+            <!-- Café Logo / Brand -->
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="bi bi-cup-hot-fill me-2"></i>
+                Modern Café
+            </a>
 
 
-                <!--
-                    Mobile Menu Button
+            <!-- Mobile Hamburger Button -->
 
-                    On smaller screens the normal navigation links
-                    are hidden and this button opens the menu.
-                -->
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-
-                    <span class="navbar-toggler-icon"></span>
-
-                </button>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
 
-                <!-- =================================================
-                     NAVIGATION LINKS
-                     ================================================= -->
+            <!-- Navigation Menu -->
 
-                <div class="collapse navbar-collapse" id="mainNavbar">
+            <div class="collapse navbar-collapse" id="navbarNav">
 
-                    <!-- Navigation links -->
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
 
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#home">
-                                Home
-                            </a>
-                        </li>
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">
+                            Home
+                        </a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">
-                                About
-                            </a>
-                        </li>
+                    <!-- About -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            About
+                        </a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#menu">
-                                Menu
-                            </a>
-                        </li>
+                    <!-- Menu -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">
+                            Menu
+                        </a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">
-                                Services
-                            </a>
-                        </li>
+                    <!-- Services -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">
+                            Services
+                        </a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#gallery">
-                                Gallery
-                            </a>
-                        </li>
+                    <!-- Gallery -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">
+                            Gallery
+                        </a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">
-                                Contact
-                            </a>
-                        </li>
+                    <!-- Contact -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Contact
+                        </a>
+                    </li>
 
-                        <!-- Call-to-action button -->
-                        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <!-- Book a Table Button -->
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
 
-                            <a
-                                href="#contact"
-                                class="btn btn-warning fw-semibold">
+                        <a
+                            href="#booking"
+                            class="btn btn-primary booking-btn"
+                        >
+                            <i class="bi bi-calendar-check me-1"></i>
+                            Book a Table
+                        </a>
 
-                                Book a Table
+                    </li>
 
-                            </a>
+                </ul>
 
-                        </li>
+            </div>
 
-                    </ul>
+        </div>
+
+        
+
+    </nav>
+
+
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+
+    <header id="home" class="hero-section">
+
+        <div class="container">
+
+            <div class="row align-items-center min-vh-75">
+
+                <!-- Hero Text -->
+
+                <div class="col-lg-6">
+
+                    <span class="badge bg-warning text-dark mb-3">
+                        Fresh • Delicious • Cozy
+                    </span>
+
+                    <h1 class="display-4 fw-bold">
+                        Your Perfect Place
+                        for Coffee & Conversations
+                    </h1>
+
+                    <p class="lead my-4">
+                        Enjoy freshly brewed coffee, delicious food,
+                        tasty desserts and a relaxing café atmosphere.
+                    </p>
+
+
+                    <!-- Hero Buttons -->
+
+                    <div class="d-flex flex-wrap gap-3">
+
+                        <!-- Go to Menu -->
+                        <a href="#menu" class="btn btn-primary btn-lg">
+                            <i class="bi bi-book me-2"></i>
+                            Explore Menu
+                        </a>
+
+                        <!-- Book Table -->
+                        <a
+                            href="#booking"
+                            class="btn btn-outline-dark btn-lg booking-btn"
+                        >
+                            <i class="bi bi-calendar-check me-2"></i>
+                            Book a Table
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero Image -->
+
+                <div class="col-lg-6 mt-5 mt-lg-0">
+
+                    <div class="hero-image-wrapper">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80"
+                            alt="Freshly brewed coffee at Modern Café"
+                            class="img-fluid rounded-4 shadow"
+                        >
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </nav>
+        </div>
 
     </header>
 
 
-    <!-- =========================================================
-         MAIN CONTENT
-         ========================================================= -->
 
-    <main>
+    <!-- ==========================================
+         ABOUT SECTION
+         ========================================== -->
 
+    <section id="about" class="py-5">
 
-        <!-- =====================================================
-             HERO SECTION
-             ===================================================== -->
+        <div class="container py-4">
 
-        <section id="home" class="py-5">
+            <div class="row align-items-center g-5">
 
-            <div class="container">
+                <!-- About Image -->
 
-                <div class="row align-items-center min-vh-75">
+                <div class="col-lg-6">
 
-                    <!-- Hero Text -->
-                    <div class="col-lg-6 text-center text-lg-start">
-
-                        <p class="text-warning fw-semibold">
-                            Welcome to Modern Café
-                        </p>
-
-                        <h1 class="display-3 fw-bold">
-                            Fresh Coffee.
-                            <br>
-                            Good Food.
-                            <br>
-                            Good Moments.
-                        </h1>
-
-                        <p class="lead mt-3">
-                            Enjoy freshly brewed coffee, delicious food,
-                            and a relaxing atmosphere with friends and family.
-                        </p>
-
-
-                        <!-- Hero Buttons -->
-                        <div class="mt-4">
-
-                            <a
-                                href="#menu"
-                                class="btn btn-warning btn-lg me-2 mb-2">
-
-                                View Menu
-
-                            </a>
-
-                            <a
-                                href="#contact"
-                                class="btn btn-outline-dark btn-lg mb-2">
-
-                                Book a Table
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Hero Image -->
-                    <div class="col-lg-6 mt-5 mt-lg-0">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
-                            class="img-fluid rounded-4 shadow"
-                            alt="Freshly brewed coffee">
-
-                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=80"
+                        alt="Modern Café interior"
+                        class="img-fluid rounded-4 shadow"
+                    >
 
                 </div>
 
-            </div>
 
-        </section>
+                <!-- About Content -->
 
+                <div class="col-lg-6">
 
-        <!-- =====================================================
-             ABOUT SECTION
-             ===================================================== -->
+                    <span class="section-subtitle">
+                        ABOUT US
+                    </span>
 
-        <section id="about" class="py-5 bg-light">
-
-            <div class="container">
-
-                <!-- Section Heading -->
-                <div class="text-center mb-5">
-
-                    <p class="text-warning fw-semibold">
-                        About Us
-                    </p>
-
-                    <h2 class="display-6 fw-bold">
+                    <h2 class="display-6 fw-bold mb-3">
                         More Than Just Coffee
                     </h2>
 
-                    <p class="text-muted">
-                        A place to relax, connect, and enjoy great food.
+                    <p>
+                        Modern Café is a comfortable place where
+                        great coffee, delicious food and good
+                        conversations come together.
                     </p>
 
-                </div>
+                    <p>
+                        Whether you want to work, meet friends,
+                        enjoy breakfast or simply relax with a cup
+                        of coffee, our café is designed for you.
+                    </p>
 
 
-                <div class="row align-items-center g-5">
+                    <!-- About Features -->
 
-                    <!-- About Image -->
-                    <div class="col-lg-6">
+                    <div class="row mt-4">
 
-                        <img
-                            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24"
-                            class="img-fluid rounded-4 shadow"
-                            alt="Modern cafe interior">
+                        <div class="col-sm-6 mb-3">
 
-                    </div>
+                            <div class="d-flex">
 
+                                <i class="bi bi-cup-hot-fill fs-3 text-primary me-3"></i>
 
-                    <!-- About Content -->
-                    <div class="col-lg-6">
-
-                        <h3 class="fw-bold mb-3">
-                            Quality in Every Cup
-                        </h3>
-
-                        <p class="text-muted">
-                            At Modern Café, we believe great coffee and good
-                            food bring people together. Our team focuses on
-                            quality ingredients, friendly service, and a
-                            comfortable atmosphere.
-                        </p>
-
-
-                        <!-- About Features -->
-                        <div class="row mt-4">
-
-                            <div class="col-sm-6 mb-3">
-
-                                <i class="bi bi-cup-hot-fill text-warning fs-3"></i>
-
-                                <h5 class="mt-2">
-                                    Fresh Coffee
-                                </h5>
-
-                                <p class="text-muted small">
-                                    Freshly brewed coffee every day.
-                                </p>
+                                <div>
+                                    <h5 class="mb-1">Fresh Coffee</h5>
+                                    <p class="small mb-0">
+                                        Freshly prepared coffee every day.
+                                    </p>
+                                </div>
 
                             </div>
 
+                        </div>
 
-                            <div class="col-sm-6 mb-3">
 
-                                <i class="bi bi-heart-fill text-warning fs-3"></i>
+                        <div class="col-sm-6 mb-3">
 
-                                <h5 class="mt-2">
-                                    Made With Care
-                                </h5>
+                            <div class="d-flex">
 
-                                <p class="text-muted small">
-                                    Quality ingredients and careful preparation.
-                                </p>
+                                <i class="bi bi-heart-fill fs-3 text-primary me-3"></i>
+
+                                <div>
+                                    <h5 class="mb-1">Made With Care</h5>
+                                    <p class="small mb-0">
+                                        Quality ingredients and friendly service.
+                                    </p>
+                                </div>
 
                             </div>
 
@@ -335,346 +326,1305 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- =====================================================
-             MENU SECTION
-             ===================================================== -->
 
-        <section id="menu" class="py-5">
+    <!-- ==========================================
+         MENU SECTION
+         ========================================== -->
 
-            <div class="container">
+    <section id="menu" class="py-5 bg-light">
 
-                <div class="text-center mb-5">
+        <div class="container py-4">
 
-                    <p class="text-warning fw-semibold">
-                        Our Menu
-                    </p>
+            <!-- Section Heading -->
 
-                    <h2 class="display-6 fw-bold">
-                        Popular Choices
-                    </h2>
+            <div class="text-center mb-5">
 
-                    <p class="text-muted">
-                        Some of our customer's favourite items.
-                    </p>
+                <span class="section-subtitle">
+                    OUR MENU
+                </span>
+
+                <h2 class="display-6 fw-bold">
+                    Delicious Choices
+                </h2>
+
+                <p class="text-muted">
+                    Choose your favorite food and drinks.
+                </p>
+
+            </div>
+
+
+            <!-- ======================================
+                 MENU SEARCH
+                 ====================================== -->
+
+            <div class="row justify-content-center mb-4">
+
+                <div class="col-md-6">
+
+                    <div class="input-group">
+
+                        <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                        </span>
+
+                        <input
+                            type="search"
+                            id="menuSearch"
+                            class="form-control"
+                            placeholder="Search menu items..."
+                            aria-label="Search menu items"
+                        >
+
+                    </div>
 
                 </div>
 
+            </div>
 
-                <div class="row g-4">
 
-                    <!-- Menu Item 1 -->
-                    <div class="col-md-6 col-lg-4">
+            <!-- ======================================
+                 MENU CATEGORY FILTERS
+                 ====================================== -->
 
-                        <div class="card h-100 border-0 shadow-sm">
+            <div
+                class="d-flex justify-content-center flex-wrap gap-2 mb-5"
+                id="menuFilters"
+            >
 
-                            <img
-                                src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7"
-                                class="card-img-top"
-                                alt="Cappuccino">
+                <button
+                    type="button"
+                    class="btn btn-primary menu-filter active"
+                    data-category="all"
+                >
+                    All
+                </button>
 
-                            <div class="card-body">
+                <button
+                    type="button"
+                    class="btn btn-outline-primary menu-filter"
+                    data-category="coffee"
+                >
+                    Coffee
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-outline-primary menu-filter"
+                    data-category="food"
+                >
+                    Food
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-outline-primary menu-filter"
+                    data-category="dessert"
+                >
+                    Desserts
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-outline-primary menu-filter"
+                    data-category="drinks"
+                >
+                    Drinks
+                </button>
+
+            </div>
+
+
+            <!-- ======================================
+                 MENU ITEMS
+                 ====================================== -->
+
+            <div class="row g-4" id="menuContainer">
+
+
+                <!-- MENU ITEM 1 -->
+
+                <div
+                    class="col-md-6 col-lg-4 menu-item"
+                    data-category="coffee"
+                    data-name="cappuccino"
+                >
+
+                    <div class="card h-100 shadow-sm menu-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Cappuccino coffee"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
 
                                 <h5 class="card-title">
                                     Cappuccino
                                 </h5>
 
-                                <p class="card-text text-muted">
-                                    Rich espresso topped with creamy foam.
-                                </p>
-
-                                <strong>
+                                <span class="menu-price">
                                     ₹180
-                                </strong>
+                                </span>
 
                             </div>
+
+                            <p class="card-text text-muted">
+                                Rich espresso with steamed milk
+                                and creamy foam.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary w-100 add-to-cart"
+                                data-id="1"
+                                data-name="Cappuccino"
+                                data-price="180"
+                            >
+                                <i class="bi bi-cart-plus me-2"></i>
+                                Add to Cart
+                            </button>
 
                         </div>
 
                     </div>
 
+                </div>
 
-                    <!-- Menu Item 2 -->
-                    <div class="col-md-6 col-lg-4">
 
-                        <div class="card h-100 border-0 shadow-sm">
+                <!-- MENU ITEM 2 -->
 
-                            <img
-                                src="https://images.unsplash.com/photo-1541167760496-1628856ab772"
-                                class="card-img-top"
-                                alt="Latte">
+                <div
+                    class="col-md-6 col-lg-4 menu-item"
+                    data-category="coffee"
+                    data-name="latte"
+                >
 
-                            <div class="card-body">
+                    <div class="card h-100 shadow-sm menu-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Latte coffee"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
 
                                 <h5 class="card-title">
                                     Café Latte
                                 </h5>
 
-                                <p class="card-text text-muted">
-                                    Smooth espresso blended with steamed milk.
-                                </p>
-
-                                <strong>
+                                <span class="menu-price">
                                     ₹160
-                                </strong>
+                                </span>
 
                             </div>
+
+                            <p class="card-text text-muted">
+                                Smooth espresso combined with
+                                warm steamed milk.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary w-100 add-to-cart"
+                                data-id="2"
+                                data-name="Café Latte"
+                                data-price="160"
+                            >
+                                <i class="bi bi-cart-plus me-2"></i>
+                                Add to Cart
+                            </button>
 
                         </div>
 
                     </div>
 
+                </div>
 
-                    <!-- Menu Item 3 -->
-                    <div class="col-md-6 col-lg-4">
 
-                        <div class="card h-100 border-0 shadow-sm">
+                <!-- MENU ITEM 3 -->
 
-                            <img
-                                src="https://images.unsplash.com/photo-1579751626657-72bc17010498"
-                                class="card-img-top"
-                                alt="Pizza">
+                <div
+                    class="col-md-6 col-lg-4 menu-item"
+                    data-category="food"
+                    data-name="club sandwich"
+                >
 
-                            <div class="card-body">
+                    <div class="card h-100 shadow-sm menu-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Club sandwich"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
 
                                 <h5 class="card-title">
-                                    Margherita Pizza
+                                    Club Sandwich
                                 </h5>
 
-                                <p class="card-text text-muted">
-                                    Classic pizza with tomato, mozzarella, and basil.
-                                </p>
+                                <span class="menu-price">
+                                    ₹220
+                                </span>
 
-                                <strong>
-                                    ₹299
-                                </strong>
+                            </div>
+
+                            <p class="card-text text-muted">
+                                Fresh vegetables, cheese and
+                                grilled bread.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary w-100 add-to-cart"
+                                data-id="3"
+                                data-name="Club Sandwich"
+                                data-price="220"
+                            >
+                                <i class="bi bi-cart-plus me-2"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MENU ITEM 4 -->
+
+                <div
+                    class="col-md-6 col-lg-4 menu-item"
+                    data-category="food"
+                    data-name="pasta"
+                >
+
+                    <div class="card h-100 shadow-sm menu-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Creamy pasta"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="card-title">
+                                    Creamy Pasta
+                                </h5>
+
+                                <span class="menu-price">
+                                    ₹250
+                                </span>
+
+                            </div>
+
+                            <p class="card-text text-muted">
+                                Creamy pasta prepared with
+                                fresh herbs and vegetables.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary w-100 add-to-cart"
+                                data-id="4"
+                                data-name="Creamy Pasta"
+                                data-price="250"
+                            >
+                                <i class="bi bi-cart-plus me-2"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MENU ITEM 5 -->
+
+                <div
+                    class="col-md-6 col-lg-4 menu-item"
+                    data-category="dessert"
+                    data-name="chocolate cake"
+                >
+
+                    <div class="card h-100 shadow-sm menu-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Chocolate cake"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="card-title">
+                                    Chocolate Cake
+                                </h5>
+
+                                <span class="menu-price">
+                                    ₹190
+                                </span>
+
+                            </div>
+
+                            <p class="card-text text-muted">
+                                Soft chocolate cake with
+                                rich chocolate cream.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary w-100 add-to-cart"
+                                data-id="5"
+                                data-name="Chocolate Cake"
+                                data-price="190"
+                            >
+                                <i class="bi bi-cart-plus me-2"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MENU ITEM 6 -->
+
+                <div
+                    class="col-md-6 col-lg-4 menu-item"
+                    data-category="drinks"
+                    data-name="cold coffee"
+                >
+
+                    <div class="card h-100 shadow-sm menu-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Cold coffee"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="card-title">
+                                    Cold Coffee
+                                </h5>
+
+                                <span class="menu-price">
+                                    ₹150
+                                </span>
+
+                            </div>
+
+                            <p class="card-text text-muted">
+                                Chilled creamy coffee topped
+                                with delicious foam.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary w-100 add-to-cart"
+                                data-id="6"
+                                data-name="Cold Coffee"
+                                data-price="150"
+                            >
+                                <i class="bi bi-cart-plus me-2"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- No Search Results Message -->
+
+            <div
+                id="noMenuResults"
+                class="text-center mt-4 d-none"
+            >
+                <p class="text-muted">
+                    No menu items found.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         CART SECTION
+         ========================================== -->
+
+    <section id="cart" class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-subtitle">
+                    YOUR ORDER
+                </span>
+
+                <h2 class="display-6 fw-bold">
+                    Shopping Cart
+                </h2>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <!-- Cart Items will be inserted by JavaScript -->
+
+                    <div id="cartItems">
+
+                        <div
+                            id="emptyCartMessage"
+                            class="text-center p-5 border rounded"
+                        >
+                            <i class="bi bi-cart3 display-4 text-muted"></i>
+
+                            <h5 class="mt-3">
+                                Your cart is empty
+                            </h5>
+
+                            <p class="text-muted">
+                                Add something delicious from our menu.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Cart Summary -->
+
+                    <div
+                        id="cartSummary"
+                        class="card mt-4 d-none"
+                    >
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5>
+                                    Total
+                                </h5>
+
+                                <h5 id="cartTotal">
+                                    ₹0
+                                </h5>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                id="clearCartBtn"
+                                class="btn btn-outline-danger w-100 mt-3"
+                            >
+                                <i class="bi bi-trash me-2"></i>
+                                Clear Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         SERVICES SECTION
+         ========================================== -->
+
+    <section id="services" class="py-5 bg-light">
+
+        <div class="container py-4">
+
+            <div class="text-center mb-5">
+
+                <span class="section-subtitle">
+                    OUR SERVICES
+                </span>
+
+                <h2 class="display-6 fw-bold">
+                    What We Offer
+                </h2>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- Service 1 -->
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 text-center p-4 service-card">
+
+                        <div class="service-icon">
+                            <i class="bi bi-cup-hot-fill"></i>
+                        </div>
+
+                        <h4>
+                            Fresh Coffee
+                        </h4>
+
+                        <p class="text-muted">
+                            Freshly prepared coffee made from
+                            quality beans.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Service 2 -->
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 text-center p-4 service-card">
+
+                        <div class="service-icon">
+                            <i class="bi bi-wifi"></i>
+                        </div>
+
+                        <h4>
+                            Free Wi-Fi
+                        </h4>
+
+                        <p class="text-muted">
+                            Work, study or relax with complimentary
+                            Wi-Fi.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Service 3 -->
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 text-center p-4 service-card">
+
+                        <div class="service-icon">
+                            <i class="bi bi-calendar-heart"></i>
+                        </div>
+
+                        <h4>
+                            Private Events
+                        </h4>
+
+                        <p class="text-muted">
+                            Celebrate birthdays, meetings and
+                            special occasions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         GALLERY SECTION
+         ========================================== -->
+
+    <section id="gallery" class="py-5">
+
+        <div class="container py-4">
+
+            <div class="text-center mb-5">
+
+                <span class="section-subtitle">
+                    GALLERY
+                </span>
+
+                <h2 class="display-6 fw-bold">
+                    Inside Modern Café
+                </h2>
+
+            </div>
+
+
+            <div class="row g-3 gallery-container">
+
+                <!-- Gallery Image 1 -->
+
+                <div class="col-6 col-md-4">
+
+                    <button
+                        type="button"
+                        class="gallery-item"
+                        data-image="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80"
+                        data-title="Café Interior"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80"
+                            alt="Modern Café interior"
+                            class="img-fluid"
+                        >
+
+                    </button>
+
+                </div>
+
+
+                <!-- Gallery Image 2 -->
+
+                <div class="col-6 col-md-4">
+
+                    <button
+                        type="button"
+                        class="gallery-item"
+                        data-image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80"
+                        data-title="Fresh Coffee"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                            alt="Fresh coffee"
+                            class="img-fluid"
+                        >
+
+                    </button>
+
+                </div>
+
+
+                <!-- Gallery Image 3 -->
+
+                <div class="col-6 col-md-4">
+
+                    <button
+                        type="button"
+                        class="gallery-item"
+                        data-image="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80"
+                        data-title="Café Seating Area"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80"
+                            alt="Café seating area"
+                            class="img-fluid"
+                        >
+
+                    </button>
+
+                </div>
+
+
+                <!-- Gallery Image 4 -->
+
+                <div class="col-6 col-md-4">
+
+                    <button
+                        type="button"
+                        class="gallery-item"
+                        data-image="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=80"
+                        data-title="Café Workspace"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80"
+                            alt="Café workspace"
+                            class="img-fluid"
+                        >
+
+                    </button>
+
+                </div>
+
+
+                <!-- Gallery Image 5 -->
+
+                <div class="col-6 col-md-4">
+
+                    <button
+                        type="button"
+                        class="gallery-item"
+                        data-image="https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=1200&q=80"
+                        data-title="Coffee and Dessert"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=800&q=80"
+                            alt="Coffee and dessert"
+                            class="img-fluid"
+                        >
+
+                    </button>
+
+                </div>
+
+
+                <!-- Gallery Image 6 -->
+
+                <div class="col-6 col-md-4">
+
+                    <button
+                        type="button"
+                        class="gallery-item"
+                        data-image="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+                        data-title="Café Dining Area"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                            alt="Café dining area"
+                            class="img-fluid"
+                        >
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         CUSTOMER REVIEWS SECTION
+         ========================================== -->
+
+    <section id="reviews" class="py-5 bg-light">
+
+        <div class="container py-4">
+
+            <div class="text-center mb-5">
+
+                <span class="section-subtitle">
+                    CUSTOMER EXPERIENCES
+                </span>
+
+                <h2 class="display-6 fw-bold">
+                    What Customers Say
+                </h2>
+
+            </div>
+
+
+            <div
+                class="row g-4"
+                id="reviewsContainer"
+            >
+
+                <!-- Sample Review 1 -->
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 p-4 review-card">
+
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+
+                        <p>
+                            "The coffee was delicious and the
+                            atmosphere was very comfortable."
+                        </p>
+
+                        <h6 class="mb-0">
+                            Demo Customer
+                        </h6>
+
+                        <small class="text-muted">
+                            Sample Review
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Sample Review 2 -->
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 p-4 review-card">
+
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+
+                        <p>
+                            "A nice place to meet friends and enjoy
+                            a relaxing cup of coffee."
+                        </p>
+
+                        <h6 class="mb-0">
+                            Demo Customer
+                        </h6>
+
+                        <small class="text-muted">
+                            Sample Review
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Sample Review 3 -->
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 p-4 review-card">
+
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+
+                        <p>
+                            "The food was fresh and the staff was
+                            friendly."
+                        </p>
+
+                        <h6 class="mb-0">
+                            Demo Customer
+                        </h6>
+
+                        <small class="text-muted">
+                            Sample Review
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Add Review Button -->
+
+            <div class="text-center mt-5">
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reviewModal"
+                >
+                    <i class="bi bi-chat-square-text me-2"></i>
+                    Write a Review
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         BOOKING SECTION
+         ========================================== -->
+
+    <section id="booking" class="py-5">
+
+        <div class="container py-4">
+
+            <div class="text-center mb-5">
+
+                <span class="section-subtitle">
+                    RESERVATION
+                </span>
+
+                <h2 class="display-6 fw-bold">
+                    Book a Table
+                </h2>
+
+                <p class="text-muted">
+                    Reserve a table for your next visit.
+                </p>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <form id="bookingForm" class="card p-4 shadow-sm">
+
+                        <div class="row g-3">
+
+
+                            <!-- Name -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="bookingName"
+                                    class="form-label"
+                                >
+                                    Your Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="bookingName"
+                                    name="bookingName"
+                                    class="form-control"
+                                    placeholder="Enter your name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- Phone -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="bookingPhone"
+                                    class="form-label"
+                                >
+                                    Phone Number *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="bookingPhone"
+                                    name="bookingPhone"
+                                    class="form-control"
+                                    placeholder="10-digit phone number"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- Date -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="bookingDate"
+                                    class="form-label"
+                                >
+                                    Date *
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="bookingDate"
+                                    name="bookingDate"
+                                    class="form-control"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- Time -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="bookingTime"
+                                    class="form-label"
+                                >
+                                    Time *
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="bookingTime"
+                                    name="bookingTime"
+                                    class="form-control"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- Number of Guests -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="guestCount"
+                                    class="form-label"
+                                >
+                                    Number of Guests *
+                                </label>
+
+                                <select
+                                    id="guestCount"
+                                    name="guestCount"
+                                    class="form-select"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select guests
+                                    </option>
+
+                                    <option value="1">
+                                        1 Guest
+                                    </option>
+
+                                    <option value="2">
+                                        2 Guests
+                                    </option>
+
+                                    <option value="3">
+                                        3 Guests
+                                    </option>
+
+                                    <option value="4">
+                                        4 Guests
+                                    </option>
+
+                                    <option value="5">
+                                        5 Guests
+                                    </option>
+
+                                    <option value="6">
+                                        6 Guests
+                                    </option>
+
+                                    <option value="7+">
+                                        7+ Guests
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Special Request -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="bookingRequest"
+                                    class="form-label"
+                                >
+                                    Special Request
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="bookingRequest"
+                                    name="bookingRequest"
+                                    class="form-control"
+                                    placeholder="Optional"
+                                >
+
+                            </div>
+
+
+                            <!-- Booking Message -->
+
+                            <div class="col-12">
+
+                                <div
+                                    id="bookingMessage"
+                                    class="d-none"
+                                    role="alert"
+                                ></div>
+
+                            </div>
+
+
+                            <!-- Submit Button -->
+
+                            <div class="col-12">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary w-100"
+                                >
+                                    <i class="bi bi-calendar-check me-2"></i>
+                                    Confirm Booking
+                                </button>
 
                             </div>
 
                         </div>
 
-                    </div>
+                    </form>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- =====================================================
-             SERVICES SECTION
-             ===================================================== -->
 
-        <section id="services" class="py-5 bg-light">
+    <!-- ==========================================
+         CONTACT SECTION
+         ========================================== -->
 
-            <div class="container">
+    <section id="contact" class="py-5 bg-light">
 
-                <div class="text-center mb-5">
+        <div class="container py-4">
 
-                    <p class="text-warning fw-semibold">
-                        What We Offer
-                    </p>
+            <div class="text-center mb-5">
 
-                    <h2 class="display-6 fw-bold">
-                        Our Services
-                    </h2>
+                <span class="section-subtitle">
+                    CONTACT US
+                </span>
 
-                </div>
-
-
-                <div class="row g-4 text-center">
-
-                    <!-- Service 1 -->
-                    <div class="col-md-4">
-
-                        <div class="p-4 bg-white rounded-4 shadow-sm">
-
-                            <i class="bi bi-cup-hot-fill fs-1 text-warning"></i>
-
-                            <h4 class="mt-3">
-                                Fresh Coffee
-                            </h4>
-
-                            <p class="text-muted">
-                                Freshly prepared coffee using quality beans.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Service 2 -->
-                    <div class="col-md-4">
-
-                        <div class="p-4 bg-white rounded-4 shadow-sm">
-
-                            <i class="bi bi-calendar-event-fill fs-1 text-warning"></i>
-
-                            <h4 class="mt-3">
-                                Private Events
-                            </h4>
-
-                            <p class="text-muted">
-                                A comfortable space for small events and gatherings.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Service 3 -->
-                    <div class="col-md-4">
-
-                        <div class="p-4 bg-white rounded-4 shadow-sm">
-
-                            <i class="bi bi-wifi fs-1 text-warning"></i>
-
-                            <h4 class="mt-3">
-                                Free Wi-Fi
-                            </h4>
-
-                            <p class="text-muted">
-                                Work, study, or relax while enjoying your coffee.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <h2 class="display-6 fw-bold">
+                    Get In Touch
+                </h2>
 
             </div>
 
-        </section>
+
+            <div class="row g-5">
 
 
-        <!-- =====================================================
-             GALLERY SECTION
-             ===================================================== -->
+                <!-- Contact Information -->
 
-        <section id="gallery" class="py-5">
+                <div class="col-lg-5">
 
-            <div class="container">
+                    <h3 class="fw-bold mb-4">
+                        We'd Love To Hear From You
+                    </h3>
 
-                <div class="text-center mb-5">
-
-                    <p class="text-warning fw-semibold">
-                        Our Café
+                    <p class="text-muted">
+                        Have a question, suggestion or feedback?
+                        Send us a message and we'll get back to you.
                     </p>
 
-                    <h2 class="display-6 fw-bold">
-                        Gallery
-                    </h2>
 
-                </div>
+                    <!-- Address -->
 
+                    <div class="d-flex mb-4">
 
-                <div class="row g-3">
+                        <i class="bi bi-geo-alt-fill fs-4 text-primary me-3"></i>
 
-                    <div class="col-6 col-lg-4">
-                        <img
-                            src="https://images.unsplash.com/photo-1445116572660-236099ec97a0"
-                            class="img-fluid rounded-3"
-                            alt="Cafe interior">
-                    </div>
+                        <div>
 
-                    <div class="col-6 col-lg-4">
-                        <img
-                            src="https://images.unsplash.com/photo-1511081692775-05d0f180a065"
-                            class="img-fluid rounded-3"
-                            alt="Coffee cup">
-                    </div>
+                            <h6 class="mb-1">
+                                Address
+                            </h6>
 
-                    <div class="col-6 col-lg-4">
-                        <img
-                            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb"
-                            class="img-fluid rounded-3"
-                            alt="Cafe seating">
-                    </div>
-
-                    <div class="col-6 col-lg-4">
-                        <img
-                            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
-                            class="img-fluid rounded-3"
-                            alt="Coffee preparation">
-                    </div>
-
-                    <div class="col-6 col-lg-4">
-                        <img
-                            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb"
-                            class="img-fluid rounded-3"
-                            alt="Cafe table">
-                    </div>
-
-                    <div class="col-6 col-lg-4">
-                        <img
-                            src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13"
-                            class="img-fluid rounded-3"
-                            alt="Coffee and dessert">
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             CONTACT SECTION
-             ===================================================== -->
-
-        <section id="contact" class="py-5 bg-light">
-
-            <div class="container">
-
-                <div class="text-center mb-5">
-
-                    <p class="text-warning fw-semibold">
-                        Get In Touch
-                    </p>
-
-                    <h2 class="display-6 fw-bold">
-                        Contact Us
-                    </h2>
-
-                </div>
-
-
-                <div class="row g-5">
-
-                    <!-- Contact Information -->
-                    <div class="col-lg-5">
-
-                        <h3 class="fw-bold">
-                            Visit Our Café
-                        </h3>
-
-                        <p class="text-muted">
-                            We'd love to welcome you. Visit us for a coffee,
-                            meal, or relaxing time with friends.
-                        </p>
-
-
-                        <div class="mt-4">
-
-                            <p>
-                                <i class="bi bi-geo-alt-fill text-warning"></i>
+                            <p class="text-muted mb-0">
                                 123 Main Street, Your City
                             </p>
 
-                            <p>
-                                <i class="bi bi-telephone-fill text-warning"></i>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="d-flex mb-4">
+
+                        <i class="bi bi-telephone-fill fs-4 text-primary me-3"></i>
+
+                        <div>
+
+                            <h6 class="mb-1">
+                                Phone
+                            </h6>
+
+                            <p class="text-muted mb-0">
                                 +91 98765 43210
                             </p>
 
-                            <p>
-                                <i class="bi bi-envelope-fill text-warning"></i>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="d-flex mb-4">
+
+                        <i class="bi bi-envelope-fill fs-4 text-primary me-3"></i>
+
+                        <div>
+
+                            <h6 class="mb-1">
+                                Email
+                            </h6>
+
+                            <p class="text-muted mb-0">
                                 hello@moderncafe.com
                             </p>
 
@@ -683,100 +1633,448 @@
                     </div>
 
 
-                    <!-- Contact Form -->
-                    <div class="col-lg-7">
+                    <!-- Opening Hours -->
 
-                        <form id="contactForm">
+                    <div class="d-flex">
 
-                            <!-- Name -->
-                            <div class="mb-3">
+                        <i class="bi bi-clock-fill fs-4 text-primary me-3"></i>
 
-                                <label for="name" class="form-label">
-                                    Your Name
-                                </label>
+                        <div>
 
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="name"
-                                    name="name"
-                                    placeholder="Enter your name"
-                                    required>
+                            <h6 class="mb-1">
+                                Opening Hours
+                            </h6>
 
-                            </div>
+                            <p class="text-muted mb-0">
+                                Monday - Sunday: 9:00 AM - 10:00 PM
+                            </p>
 
-
-                            <!-- Email -->
-                            <div class="mb-3">
-
-                                <label for="email" class="form-label">
-                                    Email Address
-                                </label>
-
-                                <input
-                                    type="email"
-                                    class="form-control"
-                                    id="email"
-                                    name="email"
-                                    placeholder="Enter your email"
-                                    required>
-
-                            </div>
-
-
-                            <!-- Message -->
-                            <div class="mb-3">
-
-                                <label for="message" class="form-label">
-                                    Message
-                                </label>
-
-                                <textarea
-                                    class="form-control"
-                                    id="message"
-                                    name="message"
-                                    rows="5"
-                                    placeholder="Write your message..."
-                                    required></textarea>
-
-                            </div>
-
-
-                            <!-- Submit Button -->
-                            <button
-                                type="submit"
-                                class="btn btn-warning">
-
-                                Send Message
-
-                            </button>
-
-
-                            <!--
-                                JavaScript will display a success
-                                message here after form submission.
-                            -->
-                            <div
-                                id="formMessage"
-                                class="mt-3">
-                            </div>
-
-                        </form>
+                        </div>
 
                     </div>
 
                 </div>
 
+
+                <!-- Contact Form -->
+
+                <div class="col-lg-7">
+
+                    <form
+                        id="contactForm"
+                        class="card p-4 shadow-sm"
+                        novalidate
+                    >
+
+
+                        <!-- Name -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="contactName"
+                                class="form-label"
+                            >
+                                Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                name="contactName"
+                                class="form-control"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="contactEmail"
+                                class="form-label"
+                            >
+                                Email *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                name="contactEmail"
+                                class="form-control"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Phone -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="contactPhone"
+                                class="form-label"
+                            >
+                                Phone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="contactPhone"
+                                name="contactPhone"
+                                class="form-control"
+                                placeholder="10-digit phone number"
+                            >
+
+                        </div>
+
+
+                        <!-- Message -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="contactMessage"
+                                class="form-label"
+                            >
+                                Message *
+                            </label>
+
+                            <textarea
+                                id="contactMessage"
+                                name="contactMessage"
+                                class="form-control"
+                                rows="5"
+                                placeholder="Write your message..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Form Message -->
+
+                        <div
+                            id="contactMessageBox"
+                            class="d-none"
+                            role="alert"
+                        ></div>
+
+
+                        <!-- Submit -->
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            <i class="bi bi-send me-2"></i>
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
-    <!-- =========================================================
+
+    <!-- ==========================================
+         REVIEW MODAL
+         ========================================== -->
+
+    <div
+        class="modal fade"
+        id="reviewModal"
+        tabindex="-1"
+        aria-labelledby="reviewModalLabel"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+
+                <!-- Modal Header -->
+
+                <div class="modal-header">
+
+                    <h5
+                        class="modal-title"
+                        id="reviewModalLabel"
+                    >
+                        Write a Review
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+
+                </div>
+
+
+                <!-- Review Form -->
+
+                <form id="reviewForm">
+
+                    <div class="modal-body">
+
+
+                        <!-- Reviewer Name -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="reviewName"
+                                class="form-label"
+                            >
+                                Your Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="reviewName"
+                                name="reviewName"
+                                class="form-control"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Rating -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="reviewRating"
+                                class="form-label"
+                            >
+                                Rating *
+                            </label>
+
+                            <select
+                                id="reviewRating"
+                                name="reviewRating"
+                                class="form-select"
+                                required
+                            >
+
+                                <option value="">
+                                    Select rating
+                                </option>
+
+                                <option value="5">
+                                    5 - Excellent
+                                </option>
+
+                                <option value="4">
+                                    4 - Very Good
+                                </option>
+
+                                <option value="3">
+                                    3 - Good
+                                </option>
+
+                                <option value="2">
+                                    2 - Average
+                                </option>
+
+                                <option value="1">
+                                    1 - Poor
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Review Text -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="reviewText"
+                                class="form-label"
+                            >
+                                Your Review *
+                            </label>
+
+                            <textarea
+                                id="reviewText"
+                                name="reviewText"
+                                class="form-control"
+                                rows="4"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Review Message -->
+
+                        <div
+                            id="reviewMessage"
+                            class="d-none"
+                            role="alert"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- Modal Footer -->
+
+                    <div class="modal-footer">
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Submit Review
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         GALLERY LIGHTBOX MODAL
+         ========================================== -->
+
+    <div
+        class="modal fade"
+        id="galleryModal"
+        tabindex="-1"
+        aria-labelledby="galleryModalLabel"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content bg-dark">
+
+                <div class="modal-header border-0">
+
+                    <h5
+                        class="modal-title text-white"
+                        id="galleryModalLabel"
+                    >
+                        Café Gallery
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+
+                </div>
+
+                <div class="modal-body text-center">
+
+                    <img
+                        id="galleryModalImage"
+                        src=""
+                        alt=""
+                        class="img-fluid rounded"
+                    >
+
+                    <p
+                        id="galleryModalTitle"
+                        class="text-white mt-3 mb-0"
+                    ></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         TOAST / NOTIFICATION
+         ========================================== -->
+
+    <div
+        class="toast-container position-fixed bottom-0 end-0 p-3"
+        id="toastContainer"
+    >
+
+        <div
+            id="siteToast"
+            class="toast"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+        >
+
+            <div class="toast-header">
+
+                <i class="bi bi-cup-hot-fill text-primary me-2"></i>
+
+                <strong class="me-auto">
+                    Modern Café
+                </strong>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="toast"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+            <div
+                class="toast-body"
+                id="toastMessage"
+            >
+                Notification
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
          FOOTER
-         ========================================================= -->
+         ========================================== -->
 
     <footer class="bg-dark text-white py-4">
 
@@ -784,29 +2082,33 @@
 
             <div class="row align-items-center">
 
-                <!-- Brand -->
+
+                <!-- Footer Brand -->
+
                 <div class="col-md-6 text-center text-md-start">
 
                     <h5 class="mb-1">
-                        <i class="bi bi-cup-hot-fill"></i>
+                        <i class="bi bi-cup-hot-fill me-2"></i>
                         Modern Café
                     </h5>
 
-                    <small class="text-white-50">
-                        Fresh coffee. Good food. Good moments.
-                    </small>
+                    <p class="small text-white-50 mb-0">
+                        Fresh coffee. Good food. Great moments.
+                    </p>
 
                 </div>
 
 
                 <!-- Copyright -->
+
                 <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
 
-                    <small>
-                        &copy;
+                    <p class="small mb-0">
+                        ©
                         <span id="currentYear"></span>
-                        Modern Café. All rights reserved.
-                    </small>
+                        Modern Café.
+                        All Rights Reserved.
+                    </p>
 
                 </div>
 
@@ -817,24 +2119,28 @@
     </footer>
 
 
-    <!-- =========================================================
+
+    <!-- ==========================================
          BOOTSTRAP JAVASCRIPT
-         Required for interactive Bootstrap components such as
-         the mobile navbar.
-         ========================================================= -->
+         ========================================== -->
 
     <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-    </script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
 
-    <!-- =========================================================
-         CUSTOM JAVASCRIPT
-         ========================================================= -->
+    <!-- ==========================================
+         OUR CUSTOM JAVASCRIPT
+         ========================================== -->
+
+    <!--
+        IMPORTANT:
+        Keep this AFTER Bootstrap JavaScript.
+        We will create this file next.
+    -->
 
     <script src="js/script.js"></script>
 
 </body>
 
 </html>
-
